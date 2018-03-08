@@ -6,7 +6,7 @@ Code for ["SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis"]
 
 ## Prerequisites
 
-- Python, NumPy, SciPy
+- Python 3, NumPy, SciPy, OpenCV 3
 - Tensorflow(>=1.4.0)
 - A recent NVIDIA GPU
 
@@ -23,7 +23,7 @@ Pre-built tfrecord files are available for out of the box training.
 - Files for Augmented Sketchy(i.e. flickr images+edge maps), resized to 256x256 regardless of original aspect ratios, can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EmF7KlhqZ8ZPnpzbTIMDKBoBcjMrezh3X2eS1P_KtWiGCQ?e=BJhFPF).
 
 If you wish to get the original image files:
-- The Sketchy Datqabase can be found [here](http://sketchy.eye.gatech.edu/).
+- The Sketchy Database can be found [here](http://sketchy.eye.gatech.edu/).
 - Use `extract_images.py` under `data_processing` to extract images from tfrecord files. You need to specify input and output paths. The extracted images will be sorted by class names.
 - Please contact me if you need the original (not resized) Flickr images, since they are too large to upload to any online space.
 
