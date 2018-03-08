@@ -4,8 +4,8 @@ import tensorflow as tf
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import clip_ops
 
-import models_mru_multi_res as models
-from input_pipeline_rand_mix import *
+import models_mru as models
+from input_pipeline import *
 from inception_v4 import inception_v4_base, inception_v4, inception_v4_arg_scope
 # from vgg import vgg_16, vgg_19, vgg_arg_scope
 from sn import spectral_normed_weight

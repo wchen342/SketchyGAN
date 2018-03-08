@@ -146,7 +146,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Train or Test model')
     parser.add_argument('--mode', type=str, default="train", help="train or test")
-    parser.add_argument('--resume_from', type=str, default='', help="Whether resume last checkpoint from a past run")
+    parser.add_argument('--resume_from', type=str, default='', help="Whether resume last checkpoint from a past run. Notice: you only need to fill in the string after skgan_, i.e. the part with yyyy-mm-dd-hr-min-sec")
     parser.add_argument('--entry_point', type=str, default='train_single', help="name of the training .py file")
     parser.add_argument('--batch_size', default=12, type=int, help='Batch size per gpu')
     parser.add_argument('--max_iter_step', default=300000, type=int, help="Max number of iterations")

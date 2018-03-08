@@ -7,8 +7,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.client import timeline
 
-from graph_supervised import build_multi_tower_graph, build_single_graph
-from input_pipeline_rand_mix import build_input_queue_paired_sketchy, build_input_queue_paired_sketchy_test, build_input_queue_paired_flickr, build_input_queue_paired_mixed
+from graph_single import build_multi_tower_graph, build_single_graph
+from input_pipeline import build_input_queue_paired_sketchy, build_input_queue_paired_sketchy_test, build_input_queue_paired_flickr, build_input_queue_paired_mixed
 import inception_score
 from config import Config
 
@@ -112,14 +112,14 @@ def train(**kwargs):
             proportion=proportion,
             data_format=data_format,
             distance_map=distance_map,
-            small=small, capacity=2 ** 12)
+            small=small, capacity=2 ** 11)
     with tf.device('/cpu:0'):
         images_d, _, image_paired_class_ids_d = build_input_queue_paired_mixed(
             batch_size=batch_size * num_gpu,
             proportion=tf.constant(0.2, dtype=tf.float32),
             data_format=data_format,
             distance_map=distance_map,
-            small=small, capacity=2 ** 12)
+            small=small, capacity=2 ** 11)
     with tf.device('/cpu:0'):
         _, sketches_100, image_paired_class_ids_100 = build_input_queue_paired_sketchy(
             batch_size=100,

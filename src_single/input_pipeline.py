@@ -9,14 +9,14 @@ from config import Config
 
 
 # TODO Change to Dataset API
-paired_dir_1 = '../CycleGAN_sketchy/training_data/sketchy_2'
-paired_dir_2 = '../CycleGAN_sketchy/training_data/flickr_output_new'
+sketchy_dir = '../training_data/sketchy'
+flickr_dir = '../training_data/flickr_output'
 
 
-paired_filenames_1 = [os.path.join(paired_dir_1, f) for f in os.listdir(paired_dir_1)
-                      if os.path.isfile(os.path.join(paired_dir_1, f))]
-paired_filenames_2 = [os.path.join(paired_dir_2, f) for f in os.listdir(paired_dir_2)
-                      if os.path.isfile(os.path.join(paired_dir_2, f))]
+paired_filenames_1 = [os.path.join(sketchy_dir, f) for f in os.listdir(sketchy_dir)
+                      if os.path.isfile(os.path.join(sketchy_dir, f))]
+paired_filenames_2 = [os.path.join(flickr_dir, f) for f in os.listdir(flickr_dir)
+                      if os.path.isfile(os.path.join(flickr_dir, f))]
 
 print("paired file sketchy num: %d" % len(paired_filenames_1))
 print("paired file flickr num: %d" % len(paired_filenames_2))
