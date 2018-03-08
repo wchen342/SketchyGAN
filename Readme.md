@@ -13,8 +13,19 @@ Code for ["SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis"]
 
 ## Preparations
 
-- The path to data files needs to be specified in `input_pipeline.py`. The dataset will be released shortly.
+- The path to data files needs to be specified in `input_pipeline.py`. See below for detailed information on data files.
 - You need to download ["Inception-V4 model"](http://download.tensorflow.org/models/inception_v4_2016_09_09.tar.gz), unzip it and put the checkpoint under `inception_v4_model`.
+
+
+## Dataset
+Pre-built tfrecord files are available for out of the box training.
+- Files for the Sketchy Database can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EtKmg1alDNdIl09WcvtJp_cBFs_7td3wKnb5FUcWZswEmw?e=eBGO6G).
+- Files for Augmented Sketchy(i.e. flickr images+edge maps), resized to 256x256 regardless of original aspect ratios, can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EmF7KlhqZ8ZPnpzbTIMDKBoBcjMrezh3X2eS1P_KtWiGCQ?e=BJhFPF).
+
+If you wish to get the original image files:
+- The Sketchy Datqabase can be found [here](http://sketchy.eye.gatech.edu/).
+- Use `extract_images.py` under `data_processing` to extract images from tfrecord files. You need to specify input and output paths. The extracted images will be sorted by class names.
+- Please contact me if you need the original (not resized) Flickr images, since they are too large to upload to any online space.
 
 
 ## Configurations

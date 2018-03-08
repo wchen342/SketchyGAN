@@ -250,7 +250,6 @@ def build_single_graph(images, sketches, images_d,
                                    reuse=True, data_format=data_format, output_channel=3)
 
     # Discriminator
-    # Stage 1
     real_disc_out, real_logit = discriminator(images_d, num_classes=num_classes, labels=image_data_class_id_d,
                                               reuse=False, data_format=data_format, scope_name='discriminator')
     fake_disc_out, fake_logit = discriminator(image_gens, num_classes=num_classes, labels=image_labels,
