@@ -22,7 +22,7 @@ Pre-built tfrecord files are available for out of the box training.
 - Files for the Sketchy Database can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EtKmg1alDNdIl09WcvtJp_cBFs_7td3wKnb5FUcWZswEmw?e=eBGO6G).
 - Files for Augmented Sketchy(i.e. flickr images+edge maps), resized to 256x256 regardless of original aspect ratios, can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EmF7KlhqZ8ZPnpzbTIMDKBoBcjMrezh3X2eS1P_KtWiGCQ?e=BJhFPF).
 
-If you wish to get the original image files:
+If you wish to get the image files:
 - The Sketchy Database can be found [here](http://sketchy.eye.gatech.edu/).
 - Use `extract_images.py` under `data_processing` to extract images from tfrecord files. You need to specify input and output paths. The extracted images will be sorted by class names.
 - Please contact me if you need the original (not resized) Flickr images, since they are too large to upload to any online space.
@@ -41,3 +41,9 @@ The model can be trained out of the box, by running `main_single.py`. But there 
 
 - The model will be saved periodically. If you wish to resume, just use commandline switch `resume_from`.
 - If you wish to test the model, change `mode` from `train` to `test` and fill in `resume_from`.
+
+
+## Credits
+- Incpetion-V4 and VGG16 code by Tensorflow Authors.
+- Tensorflow implementation of Spectral Normalization by [minhnhat93](https://github.com/minhnhat93/tf-SNDCGAN)
+- [Improved WGAN](https://github.com/igul222/improved_wgan_training)
