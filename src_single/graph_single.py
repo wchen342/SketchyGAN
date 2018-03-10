@@ -464,6 +464,7 @@ def get_losses(discriminator, vae_sampler,
         slopes = tf.sqrt(tf.reduce_sum(tf.square(gradients), axis=[1, 2, 3] if ndim == 4 else [1]))
         gradient_penalty = tf.reduce_mean(tf.maximum(0., slopes - 1.) ** 2)
         loss_d += ld * gradient_penalty
+        tf.add_to_collection("GAN_loss_d_gp", gradient_penalty)
 
         return loss_g, loss_d
 

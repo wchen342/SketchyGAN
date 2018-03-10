@@ -116,7 +116,7 @@ def train(**kwargs):
     with tf.device('/cpu:0'):
         images_d, _, image_paired_class_ids_d = build_input_queue_paired_mixed(
             batch_size=batch_size * num_gpu,
-            proportion=tf.constant(0.2, dtype=tf.float32),
+            proportion=tf.constant(0.1, dtype=tf.float32),
             data_format=data_format,
             distance_map=distance_map,
             small=small, capacity=2 ** 11)

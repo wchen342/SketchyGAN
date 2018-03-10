@@ -133,7 +133,7 @@ def image_encoder_mru(x, num_classes, reuse=False, data_format='NCHW', labels=No
     hts_4 = mru_conv(x_list[-5], hts_3,
                      size * 8, sn=sn, stride=2, dilate_rate=1,
                      data_format=data_format, num_blocks=num_blocks,
-                     last_unit=False,
+                     last_unit=True,
                      activation_fn=activation_fn_e,
                      normalizer_fn=normalizer_fn_e,
                      normalizer_params=normalizer_params_e,
@@ -191,7 +191,10 @@ def generator_skip(z, output_channel, num_classes, reuse=False, data_format='NCH
             noise_dims = [batch_size, int(input_e_dims[1] * 2), int(input_e_dims[2] * 2), channel_depth]
 
         noise_vec = tf.random_normal(shape=(batch_size, 256), dtype=tf.float32)
-        noise = fully_connected(noise_vec, int(np.prod(noise_dims[1:])), sn=sn, activation_fn=activation_fn_g)
+        noise = fully_connected(noise_vec, int(np.prod(noise_dims[1:])), sn=sn,
+                                activation_fn=activation_fn_g,
+                                normalizer_fn=normalizer_fn_g,
+                                normalizer_params=normalizer_params_g)
         noise = tf.reshape(noise, shape=noise_dims)
 
         # Initial memory state

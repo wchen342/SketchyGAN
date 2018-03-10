@@ -402,7 +402,7 @@ def mru_conv_block_v3(inp, ht, filter_depth, sn,
         if norm_input:
             full_inp = tf.concat([norm_activ(ht), inp], axis=channel_index)
         else:
-            full_inp = tf.concat([activation_fn(ht), inp], axis=channel_index)
+            full_inp = tf.concat([ht, inp], axis=channel_index)
 
     # update gate
     rg = conv2d(full_inp, hidden_depth, 3, sn=sn, stride=1, rate=dilate,
@@ -648,7 +648,7 @@ def mru_conv(x, ht, filter_depth, sn, stride=2, dilate_rate=1,
             hts_new.append(ht_new)
             inp = ht_new
 
-    if cell_block.func == mru_conv_block_v3 and last_unit:
+    if hasattr(cell_block, 'func') and cell_block.func == mru_conv_block_v3 and last_unit:
         with tf.variable_scope('mru_conv_unit_last_norm'):
             hts_new[-1] = norm_activ(hts_new[-1])
 
