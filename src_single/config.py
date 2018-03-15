@@ -5,7 +5,7 @@ class Config(object):
     # global options
     data_format = 'NCHW'    # DO NOT CHANGE THIS
     SPECTRAL_NORM_UPDATE_OPS = "spectral_norm_update_ops"
-    sn = False   # Whether uses Spectral Normalization(https://arxiv.org/abs/1802.05957)
+    sn = True   # Whether uses Spectral Normalization(https://arxiv.org/abs/1802.05957)
     proj_d = False    # Whether uses projection discriminator(https://arxiv.org/abs/1802.05637)
     wgan = False    # WGAN or DRAGAN(only effective if sn is False)
     pre_calculated_dist_map = True    # Whether calculate distance maps on the fly

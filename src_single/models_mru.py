@@ -357,7 +357,7 @@ def critic_multiple_proj(x, num_classes, labels=None, reuse=False, data_format='
             # Projection discriminator
             assert labels is not None and (len(labels.get_shape()) == 1 or labels.get_shape().as_list()[-1] == 1)
 
-            class_embeddings = embed_labels(labels, num_classes, size * 16, sn=sn)
+            class_embeddings = embed_labels(labels, num_classes, img_shape[channel_axis], sn=sn)
             class_embeddings = tf.reshape(class_embeddings, (img_shape[0], img_shape[channel_axis], 1, 1))  # NCHW
 
             disc += tf.reduce_sum(img * class_embeddings, axis=1, keep_dims=True)
