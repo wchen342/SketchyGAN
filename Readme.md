@@ -7,7 +7,7 @@ Code for ["SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis"]
 ## Prerequisites
 
 - Python 3, NumPy, SciPy, OpenCV 3
-- Tensorflow(>=1.4.0)
+- Tensorflow(>=1.7.0)
 - A recent NVIDIA GPU
 
 
