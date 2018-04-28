@@ -3,9 +3,9 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-datafile_path = "/media/cwl/Data/Programming/Others/acv_p_test1/py3/CycleGAN_sketchy/training_data/flickr_output_new"
-image_output_path = "/media/cwl/Data/test/images"
-edgemap_output_path = "/media/cwl/Data/test/edges"
+datafile_path = "../flickr_output"
+image_output_path = "../extract_output/images"
+edgemap_output_path = "../extract_output/edges"
 
 
 def get_paired_input(filenames):
