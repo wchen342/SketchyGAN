@@ -89,15 +89,16 @@ def _init_inception():
             for o in op.outputs:
                 shape = o.get_shape()
                 shape = [s.value for s in shape]
-                new_shape = []
+                # new_shape = []
                 for j, s in enumerate(shape):
                     if s == 1 and j == 0:
-                        new_shape.append(None)
-                    else:
-                        new_shape.append(s)
-                o.set_shape = tf.TensorShape(new_shape)
+                        o.shape.dims[0] = tf.Dimension(None)
+                        # new_shape.append(None)
+                #     else:
+                #         new_shape.append(s)
+                # o.set_shape(tf.TensorShape(new_shape))
         w = sess.graph.get_operation_by_name(prefix + "softmax/logits/MatMul").inputs[1]
-        logits = tf.matmul(tf.reshape(pool3, (1, -1)), w)
+        logits = tf.matmul(tf.squeeze(pool3, (1, 2)), w)
         softmax = tf.nn.softmax(logits)
 
 
