@@ -37,10 +37,24 @@ The model can be trained out of the box, by running `main_single.py`. But there 
 - Activation/Normalization functions in `models_mru.py`
 
 
-## Others
+## Model
 
 - The model will be saved periodically. If you wish to resume, just use commandline switch `resume_from`.
 - If you wish to test the model, change `mode` from `train` to `test` and fill in `resume_from`.
+
+
+## Citation
+
+If you use our work for your research, please cite our paper
+```
+@InProceedings{Chen_2018_CVPR,
+author = {Chen, Wengling and Hays, James},
+title = {SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
+}
+```
 
 
 ## Credits
