@@ -58,6 +58,6 @@ year = {2018}
 
 
 ## Credits
-- Incpetion-V4 and VGG16 code by Tensorflow Authors.
+- Inception-V4 and VGG16 code by Tensorflow Authors.
 - Tensorflow implementation of Spectral Normalization by [minhnhat93](https://github.com/minhnhat93/tf-SNDCGAN)
 - [Improved WGAN](https://github.com/igul222/improved_wgan_training)
