@@ -18,9 +18,11 @@ Code for ["SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis"]
 
 
 ## Dataset
-Pre-built tfrecord files are available for out of the box training.
-- Files for the Sketchy Database can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EtKmg1alDNdIl09WcvtJp_cBFs_7td3wKnb5FUcWZswEmw?e=eBGO6G).
-- ~~Files for Augmented Sketchy(i.e. flickr images+edge maps), resized to 256x256 regardless of original aspect ratios, can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EmF7KlhqZ8ZPnpzbTIMDKBoBcjMrezh3X2eS1P_KtWiGCQ?e=BJhFPF).~~ The webite hosting the dataset is no longer available. Please use the script under `data_processing` folder to crawl your own images.
+~~Pre-built tfrecord files are available for out of the box training.~~
+- ~~Files for the Sketchy Database can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EtKmg1alDNdIl09WcvtJp_cBFs_7td3wKnb5FUcWZswEmw?e=eBGO6G).~~
+- ~~Files for Augmented Sketchy(i.e. flickr images+edge maps), resized to 256x256 regardless of original aspect ratios, can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EmF7KlhqZ8ZPnpzbTIMDKBoBcjMrezh3X2eS1P_KtWiGCQ?e=BJhFPF).~~
+
+**Note**: The webite hosting the dataset is no longer available. Please use the script under `data_processing` folder to crawl your own images.
 
 If you wish to get the image files:
 - The Sketchy Database can be found [here](http://sketchy.eye.gatech.edu/).
