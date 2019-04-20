@@ -7,7 +7,7 @@ Code for ["SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis"]
 ## Prerequisites
 
 - Python 3, NumPy, SciPy, OpenCV 3
-- Tensorflow(>=1.7.0)
+- Tensorflow(>=1.7.0). Tensorflow 2.0 is not supported.
 - A recent NVIDIA GPU
 
 
@@ -23,6 +23,8 @@ Code for ["SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis"]
 - ~~Files for Augmented Sketchy(i.e. flickr images+edge maps), resized to 256x256 regardless of original aspect ratios, can be found [here](https://gtvault-my.sharepoint.com/:f:/g/personal/wchen342_gatech_edu/EmF7KlhqZ8ZPnpzbTIMDKBoBcjMrezh3X2eS1P_KtWiGCQ?e=BJhFPF).~~
 
 **Note**: The webite hosting the dataset is no longer available. Please use the script under `data_processing` folder to crawl your own images.
+
+If you want to build tfrecord files from images, run `flickr_to_tfrecord.py` or `sketchy_to_tfrecord.py` for the respective dataset.
 
 If you wish to get the image files:
 - The Sketchy Database can be found [here](http://sketchy.eye.gatech.edu/).
