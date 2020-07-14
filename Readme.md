@@ -29,7 +29,8 @@ If you want to build tfrecord files from images, run `flickr_to_tfrecord.py` or 
 If you wish to get the image files:
 - The Sketchy Database can be found [here](http://sketchy.eye.gatech.edu/).
 - Use `extract_images.py` under `data_processing` to extract images from tfrecord files. You need to specify input and output paths. The extracted images will be sorted by class names.
-- Please contact me if you need the original (not resized) Flickr images, since they are too large to upload to any online space.
+- The dataset I used is no longer availabe due to its large size. You can crawl your own images and run through `edge_detection/batch_hed.py` -> `edge_detection/PostprocessHED.m` -> ``flickr_to_tfrecord.py` to create your own dataset.
+- ~~Please contact me if you need the original (not resized) Flickr images, since they are too large to upload to any online space.~~
 
 
 ## Configurations
